@@ -17,6 +17,7 @@ type LoggingDriver string
 
 const (
 	JsonFileDriver LoggingDriver = "json-file"
+	NoneDriver     LoggingDriver = "none"
 	SyslogDriver   LoggingDriver = "syslog"
 	JournaldDriver LoggingDriver = "journald"
 	GelfDriver     LoggingDriver = "gelf"
@@ -27,6 +28,7 @@ const (
 
 var LoggingDriverMinimumVersion = map[LoggingDriver]DockerVersion{
 	JsonFileDriver: Version_1_18,
+   NoneDriver:     Version_1_18,
 	SyslogDriver:   Version_1_18,
 	JournaldDriver: Version_1_19,
 	GelfDriver:     Version_1_20,
